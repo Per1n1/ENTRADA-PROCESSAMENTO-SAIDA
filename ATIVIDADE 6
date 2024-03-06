@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class CalculadoraDesconto {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicita ao usuário o nome do produto
+        System.out.println("Digite o nome do produto:");
+        String nomeProduto = scanner.nextLine();
+        
+        // Solicita ao usuário o preço do produto
+        System.out.println("Digite o preço do produto:");
+        double precoProduto = scanner.nextDouble();
+        
+        // Solicita ao usuário o percentual de desconto
+        System.out.println("Digite o percentual de desconto (%):");
+        double percentualDesconto = scanner.nextDouble();
+        
+        // Calcula o valor do desconto
+        double desconto = precoProduto * (percentualDesconto / 100);
+        
+        // Calcula o novo preço do produto com o desconto aplicado
+        double novoPreco = precoProduto - desconto;
+        
+        // Exibe o nome do produto e o novo preço com desconto
+        System.out.println("Nome do produto: " + nomeProduto);
+        System.out.println("Novo preço com desconto: " + novoPreco);
+        
+        scanner.close();
+    }
+}
